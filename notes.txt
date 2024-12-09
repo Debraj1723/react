@@ -27,3 +27,24 @@ Ans. react.development.js
       1. Optimized for productions
       2. stripped of all unnecessary debugging info , warnigs and development specific code
       3. Minified and smaller in size to improve loading time and performance
+
+
+#Parcel
+
+- Dev Build
+- Host To A local server
+- HMR - Hot Module Replacement
+- File watching algorithm
+- Caching - For Faster builds
+- Image Optimization
+- Minification during production build
+- Bundling 
+- Compressing 
+- consistent hashing
+- code splitting
+- differential bundling - support older version
+- Diagnostic
+- Error Handling
+- HTTps
+- Tree shaking - removes unused code for u
+- 
