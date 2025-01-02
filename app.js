@@ -1,24 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
+
+const jsxHeading = (
+  <h1 className="head" tabIndex="5">
+    Namaste Debraj Basak
+  </h1>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const heading = React.createElement(
-  "h1",
-  { id: "heading", class: "red" },
-  "Hello world from React!"
-);
-
-console.log(heading);
-root.render(heading);
-
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "sdfsdf"),
-    React.createElement("h2", {}, "sdfsdf"),
-  ])
-);
-
-root.render(parent);
+root.render(jsxHeading);
