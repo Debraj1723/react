@@ -1,3 +1,52 @@
-.red{
-    color: red;
+.red {
+  color: red;
+}
+
+.app,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  display: flex;
+  border-radius: 10px;
+  background: blanchedalmond;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.nav-items ul {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.nav-items ul li {
+  cursor: pointer;
+}
+
+.res-card{
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.res-card img{
+  width: 100%;
+  height: auto;
+}
+
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  gap: 16px;
 }
