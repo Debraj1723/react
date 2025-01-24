@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .red {
   color: red;
 }
@@ -34,17 +39,25 @@ ul {
 
 .res-card{
   width: 200px;
-  height: 300px;
   border-radius: 10px;
-  border: 1px solid black;
+  filter: drop-shadow(2px 4px 6px grey);
+  cursor: pointer;
+}
+
+.res-card:hover{
+  filter: drop-shadow(2px 4px 6px lightBlue);
 }
 
 .res-card img{
   width: 100%;
   height: auto;
+  aspect-ratio: 14 / 9;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .res-container{
+  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 16px;
