@@ -1,6 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
+}
+
+.app {
+  height: 100vh;
+  overflow: auto;
+}
+
+.body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 78px;
+  height: calc(100vh - 78px);
+  padding-bottom: 16px;
 }
 
 .red {
@@ -14,6 +28,8 @@ ul {
 }
 
 .header {
+  position: fixed;
+  width: -webkit-fill-available;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
@@ -37,29 +53,67 @@ ul {
   cursor: pointer;
 }
 
-.res-card{
-  width: 200px;
-  border-radius: 10px;
-  filter: drop-shadow(2px 4px 6px grey);
+.res-card {
+  width: calc((100% / 4) - 16px);
   cursor: pointer;
 }
 
-.res-card:hover{
-  filter: drop-shadow(2px 4px 6px lightBlue);
+.res-card .imageHolder{
+  aspect-ratio: 14/9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
 }
 
-.res-card img{
-  width: 100%;
-  height: auto;
-  aspect-ratio: 14 / 9;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.res-container{
-  margin-top: 16px;
+.res-container {
   display: flex;
   flex-wrap: wrap;
   row-gap: 16px;
   gap: 16px;
+  padding-bottom: 40px;
+}
+
+.contentArea{
+  padding: 16px 8px;
+}
+
+.rating{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.rating p {
+  font-weight: 600;
+  
+}
+
+.rating img{
+  width: 20px;
+  height: 20px;
+}
+
+
+.res-name{
+  font-size:20px;
+  font-weight:600 !important;
+  margin-bottom: 8px;
+}
+
+.cuisines{
+  color: #666666;
+}
+
+input{
+  height: 32px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px;
+  border:none;
+  border: 1px solid #dddddd;
+}
+
+.searchContainer{
+  padding: 16px 0;
 }

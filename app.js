@@ -238,13 +238,19 @@ const RestaurantCard = ({ data }) => {
   const { image_url, name, cuisine, rating, price_for_two, delivery_time } =
     data;
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
-      <img src={image_url} />
-      <h4>{name}</h4>
-      <h4>{cuisine.join(" | ")}</h4>
-      <h4>{rating} stars</h4>
-      <h4>Rs. {price_for_two.toFixed(2)}/- For two</h4>
-      <h4>Delivery in {delivery_time}</h4>
+    <div className="res-card">
+      <div
+        className="imageHolder"
+        style={{ backgroundImage: `url(${image_url})` }}
+      ></div>
+      <div className="contentArea">
+      <h4 className="res-name">{name}</h4>
+      <div className="rating">
+        <img src="https://cdn-icons-png.flaticon.com/128/16171/16171325.png" />
+        <p>{rating} . {delivery_time}</p>
+      </div>
+      <p className="cuisines">{cuisine.join(", ")}</p>
+      </div>
     </div>
   );
 };
