@@ -1,13 +1,13 @@
 import { CN_URL } from "../utils/constants";
 
-const RestaurantCard = ({data}) => {
-  console.log(data)
-  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo,sla } = data.info;
+const RestaurantCard = ({ data }) => {
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
+    data.info;
   return (
     <div className="res-card">
       <div
         className="imageHolder"
-        style={{ backgroundImage: `url(${CN_URL+cloudinaryImageId})` }}
+        style={{ backgroundImage: `url(${CN_URL + cloudinaryImageId})` }}
       ></div>
       <div className="contentArea">
         <h4 className="res-name">{name}</h4>

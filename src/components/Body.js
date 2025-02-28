@@ -1,9 +1,23 @@
 import RestaurantCard from "./RestaurantCard";
 import restaurants from "./../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
-  let [filteredlList,setFileteredList] = useState(JSON.parse(JSON.stringify(restaurants)));
+  let [filteredlList, setFileteredList] = useState([]);
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
+  const fetchApi = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9584922&lng=77.7126588&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const response = await data.json();
+    setFileteredList(response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  };
+  if(filteredlList.length === 0) return (<p  style={{ color: 'red', 'margin-top':'100px' }}>Loading . . .</p>)
+
   return (
     <div className="body">
       <div className="searchContainer">
