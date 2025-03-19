@@ -53,7 +53,7 @@ ul {
   cursor: pointer;
 }
 
-.res-card {
+.res-card,.shimmer-card {
   width: calc((100% / 4) - 16px);
   cursor: pointer;
 }
@@ -106,7 +106,6 @@ ul {
 }
 
 input{
-  height: 32px;
   width: 100%;
   border-radius: 10px;
   padding: 8px;
@@ -114,6 +113,53 @@ input{
   border: 1px solid #dddddd;
 }
 
+button{
+  padding: 0 12px;
+}
+
 .searchContainer{
   padding: 16px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.searchArea{
+  display: flex;
+  width: 30%;
+  gap: 16px;
+}
+
+.shimmer-card .imageHolder{
+  aspect-ratio: 14/9;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.shimmerContentArea{
+  margin-top: 16px;
+}
+
+.shimmer-name{
+  width:70%;
+  height: 10px;
+  background-color: lightgrey;
+  margin-top: 4px;
+  border-radius: 10px;
+}
+
+.shimmerRating{
+  width:35%;
+  height: 10px;
+  background-color: lightgrey;
+  margin-top: 4px;
+  border-radius: 10px;
+}
+
+.shimmerCuisines{
+  width:20%;
+  height: 10px;
+  background-color: lightgrey;
+  margin-top: 4px;
+  border-radius: 10px;
 }
